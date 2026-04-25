@@ -1,11 +1,24 @@
 {
   "headers": [
     {
-      "source": "/(.*)\\.wasm",
+      "source": "/(.*).wasm",
       "headers": [
         {
           "key": "Content-Type",
           "value": "application/wasm"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).js.gz",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        },
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
         }
       ]
     }
